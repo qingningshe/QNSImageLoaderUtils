@@ -20,7 +20,7 @@ import java.text.DecimalFormat;
  */
 public class GlideUtils {
     /**
-     * 清空本地缓存
+     * 清空本地缓存,在子线程中调用
      *
      * @param context
      */
@@ -29,7 +29,7 @@ public class GlideUtils {
     }
 
     /**
-     * 返回默认缓存目录下的缓存大小
+     * 返回默认缓存目录下的缓存大小,在子线程中调用
      *
      * @param context
      * @return 占用空间 单位：Byte
@@ -40,7 +40,7 @@ public class GlideUtils {
     }
 
     /**
-     * 返回默认缓存目录下的缓存大小
+     * 返回默认缓存目录下的缓存大小,在子线程中调用
      *
      * @param context
      * @return 占用空间 e. 0.55M  2.55M
