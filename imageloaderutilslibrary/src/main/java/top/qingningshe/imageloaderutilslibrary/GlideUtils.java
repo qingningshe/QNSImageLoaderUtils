@@ -107,104 +107,196 @@ public class GlideUtils {
         req.crossFade().into(iv);
     }
 
+    /**
+     * 从网络获取图片
+     *
+     * @param context
+     * @param url            图片地址
+     * @param iv             控件
+     * @param transformation 相应变换,可以依赖 compile 'jp.wasabeef:glide-transformations:2.0.1'
+     */
     public static void loadImageFromNet(Context context, String url, ImageView iv, Transformation transformation) {
         loadImage(Glide.with(context).load(url), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromNet(Context, String, ImageView, Transformation)}
+     */
     public static void loadImageFromNet(Context context, String url, ImageView iv) {
         loadImage(Glide.with(context).load(url), iv, null);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromNet(Context, String, ImageView, Transformation)}
+     */
     public static void loadImageFromNet(Activity activity, String url, ImageView iv, Transformation transformation) {
         loadImage(Glide.with(activity).load(url), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromNet(Context, String, ImageView, Transformation)}
+     */
     public static void loadImageFromNet(Activity activity, String url, ImageView iv) {
         loadImage(Glide.with(activity).load(url), iv, null);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromNet(Context, String, ImageView, Transformation)}
+     */
     public static void loadImageFromNet(Fragment fragment, String url, ImageView iv, Transformation transformation) {
         loadImage(Glide.with(fragment).load(url), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromNet(Context, String, ImageView, Transformation)}
+     */
     public static void loadImageFromNet(Fragment fragment, String url, ImageView iv) {
         loadImage(Glide.with(fragment).load(url), iv, null);
     }
 
+    /**
+     * 从Asset加载图片
+     *
+     * @param context
+     * @param fileName       图片名称，如“test1.png”,如果没有在根目录，则需要加上路径，如“image/test1.png”
+     * @param iv             图片控件
+     * @param transformation 相应变换,可以依赖 compile 'jp.wasabeef:glide-transformations:2.0.1'
+     */
     public static void loadImageFromAsset(Context context, String fileName, ImageView iv, Transformation
             transformation) {
         loadImage(Glide.with(context).load("file:///android_asset/" + fileName), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromAsset(Context, String, ImageView)}
+     */
     public static void loadImageFromAsset(Context context, String fileName, ImageView iv) {
         loadImage(Glide.with(context).load("file:///android_asset/" + fileName), iv, null);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromAsset(Context, String, ImageView)}
+     */
     public static void loadImageFromAsset(Activity activity, String fileName, ImageView iv, Transformation
             transformation) {
         loadImage(Glide.with(activity).load("file:///android_asset/" + fileName), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromAsset(Context, String, ImageView)}
+     */
     public static void loadImageFromAsset(Activity activity, String fileName, ImageView iv) {
         loadImage(Glide.with(activity).load("file:///android_asset/" + fileName), iv, null);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromAsset(Context, String, ImageView)}
+     */
     public static void loadImageFromAsset(Fragment fragment, String fileName, ImageView iv, Transformation
             transformation) {
         loadImage(Glide.with(fragment).load("file:///android_asset/" + fileName), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromAsset(Context, String, ImageView)}
+     */
     public static void loadImageFromAsset(Fragment fragment, String fileName, ImageView iv) {
         loadImage(Glide.with(fragment).load("file:///android_asset/" + fileName), iv, null);
     }
 
+    /**
+     * 从drawable中加载图片
+     *
+     * @param context
+     * @param resId          图片资源id
+     * @param iv             图片控件
+     * @param transformation 相应变换,可以依赖 compile 'jp.wasabeef:glide-transformations:2.0.1'
+     */
     public static void loadImageFromResources(Context context, @DrawableRes int resId, ImageView iv, Transformation
             transformation) {
         loadImage(Glide.with(context).load(resId), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromResources(Context, int, ImageView, Transformation)}
+     */
     public static void loadImageFromResources(Context context, @DrawableRes int resId, ImageView iv) {
         loadImage(Glide.with(context).load(resId), iv, null);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromResources(Context, int, ImageView, Transformation)}
+     */
     public static void loadImageFromResources(Activity activity, @DrawableRes int resId, ImageView iv, Transformation
             transformation) {
         loadImage(Glide.with(activity).load(resId), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromResources(Context, int, ImageView, Transformation)}
+     */
     public static void loadImageFromResources(Activity activity, @DrawableRes int resId, ImageView iv) {
         loadImage(Glide.with(activity).load(resId), iv, null);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromResources(Context, int, ImageView, Transformation)}
+     */
     public static void loadImageFromResources(Fragment fragment, @DrawableRes int resId, ImageView iv, Transformation
             transformation) {
         loadImage(Glide.with(fragment).load(resId), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromResources(Context, int, ImageView, Transformation)}
+     */
     public static void loadImageFromResources(Fragment fragment, @DrawableRes int resId, ImageView iv) {
         loadImage(Glide.with(fragment).load(resId), iv, null);
     }
 
+    /**
+     * 从文件中加载图片
+     *
+     * @param context
+     * @param file           图片文件
+     * @param iv             图片控件
+     * @param transformation 图片变化
+     */
     public static void loadImageFromFile(Context context, File file, ImageView iv, Transformation transformation) {
         loadImage(Glide.with(context).load(file), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromFile(Activity, File, ImageView, Transformation)}
+     */
     public static void loadImageFromFile(Context context, File file, ImageView iv) {
         loadImage(Glide.with(context).load(file), iv, null);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromFile(Activity, File, ImageView, Transformation)}
+     */
     public static void loadImageFromFile(Activity activity, File file, ImageView iv, Transformation transformation) {
         loadImage(Glide.with(activity).load(file), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromFile(Activity, File, ImageView, Transformation)}
+     */
     public static void loadImageFromFile(Activity activity, File file, ImageView iv) {
         loadImage(Glide.with(activity).load(file), iv, null);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromFile(Activity, File, ImageView, Transformation)}
+     */
     public static void loadImageFromFile(Fragment fragment, File file, ImageView iv, Transformation transformation) {
         loadImage(Glide.with(fragment).load(file), iv, transformation);
     }
 
+    /**
+     * @see {@link GlideUtils#loadImageFromFile(Activity, File, ImageView, Transformation)}
+     */
     public static void loadImageFromFile(Fragment fragment, File file, ImageView iv) {
         loadImage(Glide.with(fragment).load(file), iv, null);
     }
